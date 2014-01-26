@@ -104,6 +104,12 @@ h1 {
     font-weight: bold;
 }
 
+.view-button  {
+	float: right;
+	margin-top: -40px;
+	margin-right: 3px;
+	zoom: 0.8;
+}
 
 
 

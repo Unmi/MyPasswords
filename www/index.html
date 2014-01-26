@@ -38,19 +38,12 @@
             <div data-role="header">
                 <a href="#" data-role="button" data-icon="search" class="ui-btn-left my-button"></a>
                 <h1>My Passwords</h1>
-                <a href="#addpage" data-transition="slide" data-role="button" data-icon="plus" class="ui-btn-right my-button"></a>
+                <a href="#" id="to-add-button" data-transition="slide" data-role="button" data-icon="plus" class="ui-btn-right my-button"></a>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
                 <fieldset class="ui-grid-b">
-                    <div class="ui-block-b"><input type="button" value="Facebook"></div>
-                    <div class="ui-block-b"><input type="reset" value="Twitter"></div>
-                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
-                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
-                    <div class="ui-block-c"><input type="submit" value="BOA"></div>
-                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
-                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
-                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
+                    <div class="ui-block-b"><input  type="button" value="Loading"></div>
                 </fieldset>
             </div><!-- /content -->
         </div><!-- /page -->
@@ -61,17 +54,24 @@
             <div data-role="header">
                 <a href="#homepage" data-transition="slide" data-direction="reverse" data-role="button" data-icon="back" class="ui-btn-left my-button"></a>
                 <h1>My Passwords</h1>
+                <a href="#" id="add-or-update-button" data-transition="slide" data-direction="reverse" data-role="button" data-icon="check" class="ui-btn-right my-button"></a>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
-                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#homepage" data-transition="slide">Back to foo</a></p>
+                <input type="text" id="ftitle" placeholder="Title">
+                <input type="text" id="furl" placeholder="URL" value="http://">
+                <input type="text" id="fuser" placeholder="Username">
+                <input type="password" maxlength="12" id="fpass" placeholder="Password">
+                <a href="#" class="view-button" data-role="button" data-iconpos="notext" data-icon="info" data-inline="true"></a>
+                <textarea id="fmemo" placeholder="Memo"></textarea>
+                <input type="button" id="delete-button" data-icon="delete" data-iconpos="right" value="Delete">
             </div><!-- /content -->
         </div><!-- /page -->
     </body>
 </html>
 
 <script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="js/cards.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
