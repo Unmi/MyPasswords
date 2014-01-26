@@ -31,21 +31,26 @@
         
         <title>MyPasswords</title>
     </head>
-    <body><div class="ios7" style="height:200px"></div>
+    <body>
         <!-- Start of home page -->
         <div data-role="page" id="homepage">
             
             <div data-role="header">
                 <a href="#" data-role="button" data-icon="search" class="ui-btn-left my-button"></a>
                 <h1>My Passwords</h1>
-                <a href="#addpage" data-role="button" data-icon="plus" class="ui-btn-right my-button"></a>
+                <a href="#addpage" data-transition="slide" data-role="button" data-icon="plus" class="ui-btn-right my-button"></a>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
                 <fieldset class="ui-grid-b">
-                    <div class="ui-block-a"><input type="button" value="Facebook"></div>
+                    <div class="ui-block-b"><input type="button" value="Facebook"></div>
                     <div class="ui-block-b"><input type="reset" value="Twitter"></div>
+                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
+                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
                     <div class="ui-block-c"><input type="submit" value="BOA"></div>
+                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
+                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
+                    <div class="ui-block-b"><input type="submit" value="BOA"></div>
                 </fieldset>
             </div><!-- /content -->
         </div><!-- /page -->
@@ -54,13 +59,13 @@
         <div data-role="page" id="addpage">
             
             <div data-role="header">
-                <a href="#homepage" data-role="button" data-icon="back" class="ui-btn-left my-button"></a>
+                <a href="#homepage" data-transition="slide" data-direction="reverse" data-role="button" data-icon="back" class="ui-btn-left my-button"></a>
                 <h1>My Passwords</h1>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
                 <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#homepage">Back to foo</a></p>
+                <p><a href="#homepage" data-transition="slide">Back to foo</a></p>
             </div><!-- /content -->
         </div><!-- /page -->
     </body>
