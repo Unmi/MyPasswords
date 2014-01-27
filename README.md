@@ -41,6 +41,7 @@ to view the latest effect immediately.
 ###Install Plugin
 
 For an instance, we'll install [org.apache.cordova.device](https://build.phonegap.com/plugins/250), it's used to get device information including below fields
+
 > device { name, cordova, platform, uuid, version, model }
 
 > $ phonegap plugin add https://github.com:apache/cordova-plugin-device.git
@@ -52,3 +53,17 @@ for now, we can call device.version with JavaScript codes, and run
 > $ phonegap run ios
 
 to see plugin's performance.
+
+###Transparent Background on iOS
+
+By default, the webview background color is black, so if we slide up or down, we'll see the ugly black gap. It's recommended to clear the background color, how to do? Under built XCode project, find the file MainViewController.m, change the following line
+
+> theWebView.backgroundColor = [UIColor blackColor];
+
+to
+
+> theWebView.backgroundColor = [UIColor clearColor];
+
+Base on your html background color, you may set html body tranparent with this
+
+> <body style="background-color: transparent">

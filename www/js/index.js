@@ -77,6 +77,7 @@ $(document).on('pagebeforeshow', '#addpage', function (event) {
 		$("#delete-button").parent().hide();
 	}
 	
+	$("#fpass").parent("div").css("margin-right", "30px");
     
     $(".view-button").off("tap").on("tap",function(){
 		$("#fpass").attr("type", "password"==$("#fpass").attr("type") ? "text" : "password");
@@ -84,6 +85,7 @@ $(document).on('pagebeforeshow', '#addpage', function (event) {
 });
 
 $(function(){
+	
 	$("#add-or-update-button").off("tap").on("tap",function(){
 		  var item = {
 		      title: $("#ftitle").val(),
@@ -107,7 +109,8 @@ $(function(){
 	});
 	
 	$("#search-button").on("tap", function(){
-		$(".ui-input-search").toggle("slow", "linear");
+		$(".ui-input-search").toggle("normal", "linear");
+//		$("#search").focus();
 	});
 	
 	$("#search").bind('input propertychange', function(){
