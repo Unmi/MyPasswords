@@ -116,6 +116,10 @@ $(function(){
 	$("#search").bind('input propertychange', function(){
 		cards.showCards($(this).val());
 	});
+	
+	$(".ui-input-clear").on("tap", function(){
+		cards.showCards();
+	});
 });
 
 

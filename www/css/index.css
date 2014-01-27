@@ -119,6 +119,11 @@ h1 {
 	margin-top: 2px;
 }
 
+.ui-block-b > div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 
 
 
