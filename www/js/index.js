@@ -84,7 +84,7 @@ $(document).on('pagebeforeshow', '#addpage', function (event) {
 });
 
 $(function(){
-	$("#add-or-update-button").on("tap",function(){
+	$("#add-or-update-button").off("tap").on("tap",function(){
 		  var item = {
 		      title: $("#ftitle").val(),
 		      url: $("#furl").val(),
@@ -96,7 +96,7 @@ $(function(){
 		  $.mobile.changePage( "#homepage", {transition: "slidedown"});
 	});
 	
-	$("#to-add-button").on("tap",function(){
+	$("#to-add-button").off("tap").on("tap",function(){
 		cards.setCurrentId(-1);
 		$.mobile.changePage( "#addpage", {transition: "slide"});
 	});
@@ -104,6 +104,14 @@ $(function(){
 	$("#delete-button").on("tap",function(){
 		cards.deleteById(cards.currentId());
 		$.mobile.changePage( "#homepage", {transition: "slidedown"});
+	});
+	
+	$("#search-button").on("tap", function(){
+		$(".ui-input-search").toggle("slow", "linear");
+	});
+	
+	$("#search").bind('input propertychange', function(){
+		cards.showCards($(this).val());
 	});
 });
 

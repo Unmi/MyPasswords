@@ -9,11 +9,18 @@ var cards = (function(){
 //		tx.executeSql('insert into passwords(id, title,url) values(2, "d","df")');
 	});
 	
-	var showCards = function(){
+	var showCards = function(condition){
 		setCurrentId(-1);
-		db.transaction(function(tx){
-		     tx.executeSql('SELECT * FROM passwords', [], _doShowCards);
-		});
+		if(condition && condition.trim()!=""){ //search
+			var input = condition.trim();
+			db.transaction(function(tx){
+			     tx.executeSql("SELECT * FROM passwords where title like '%"+input+"%'", [], _doShowCards);
+			});
+		}else{ //show all
+			db.transaction(function(tx){
+			     tx.executeSql('SELECT * FROM passwords', [], _doShowCards);
+			});
+		}
 	};
 	
 	var _doShowCards = function(tx, results) {
