@@ -19,7 +19,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:14px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -97,7 +97,7 @@ h1 {
 }
 
 .my-button {
-    padding: 12px 17px 12px 12px !important;
+    /* margin-top: -5px !important; */
 }
 
 h1 {
@@ -106,16 +106,15 @@ h1 {
 
 .view-button  {
 	float: right;
-	margin-top: -40px;
+	margin-top: -37px;
 	margin-right: 3px;
-	zoom: 0.8;
 }
 
 .ui-input-search {
 	display:none;
 	position: absolute;
 	width: 70%;
-	margin-left: 40px;
+	margin-left: 30px;
 	margin-top: 2px;
 }
 

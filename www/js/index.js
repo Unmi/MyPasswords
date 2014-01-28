@@ -77,7 +77,7 @@ $(document).on('pagebeforeshow', '#addpage', function (event) {
 		$("#delete-button").parent().hide();
 	}
 	
-	$("#fpass").parent("div").css("margin-right", "30px");
+	$("#fpass").parent("div").css("margin-right", "36px");
     
     $(".view-button").off("tap").on("tap",function(){
 		$("#fpass").attr("type", "password"==$("#fpass").attr("type") ? "text" : "password");
@@ -119,6 +119,10 @@ $(function(){
 	
 	$(".ui-input-clear").on("tap", function(){
 		cards.showCards();
+	});
+	
+	$("#addpage").on("swiperight",function(){
+		$.mobile.changePage( "#homepage", {transition: "slide", reverse: true});
 	});
 });
 

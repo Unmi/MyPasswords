@@ -35,11 +35,11 @@
         <!-- Start of home page -->
         <div data-role="page" id="homepage">
             
-            <div data-role="header">
-                <a href="#" id="search-button" data-role="button" data-icon="search" class="ui-btn-left my-button"></a>
+            <div data-role="header" class="ui-bar">
+                <a href="#" id="search-button" data-role="button" data-iconpos="notext" data-icon="search" class="ui-btn-left my-button"></a>
                 <input type="search" name="search" id="search">
                 <h1>My Passwords</h1>
-                <a href="#" id="to-add-button" data-transition="slide" data-role="button" data-icon="plus" class="ui-btn-right my-button"></a>
+                <a href="#" id="to-add-button" data-transition="slide" data-role="button" data-iconpos="notext" data-icon="plus" class="ui-btn-right my-button"></a>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
@@ -47,15 +47,18 @@
                     <div class="ui-block-b"><input  type="button" value="Loading"></div>
                 </fieldset>
             </div><!-- /content -->
+	        <div data-role="footer" class="ui-bar" data-position="fixed">
+			    <a href="index.html" data-role="button" data-icon="arrow-d">Down</a>
+			</div>
         </div><!-- /page -->
         
         <!-- Start of add page -->
         <div data-role="page" id="addpage">
             
-            <div data-role="header">
-                <a href="#homepage" data-transition="slide" data-direction="reverse" data-role="button" data-icon="back" class="ui-btn-left my-button"></a>
+            <div data-role="header" class="ui-bar">
+                <a href="#homepage" data-transition="slide" data-direction="reverse" data-iconpos="notext" data-role="button" data-icon="back" class="ui-btn-left my-button"></a>
                 <h1>My Passwords</h1>
-                <a href="#" id="add-or-update-button" data-transition="slide" data-direction="reverse" data-role="button" data-icon="check" class="ui-btn-right my-button"></a>
+                <a href="#" id="add-or-update-button" data-transition="slide" data-iconpos="notext" data-direction="reverse" data-role="button" data-icon="check" class="ui-btn-right my-button"></a>
             </div><!-- /header -->
             
             <div role="main" class="ui-content">
